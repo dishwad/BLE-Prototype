@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=yes,
+		initial-scale=1.0" />
+
+	<title>MEDTRAQ Beacon Demo</title>
+
+	<style>
+	@import 'page.css';
+	</style>
+
+	<script>
+	// Redirect console if running from Evothings Workbench.
+	if (window.hyper) { console.log = hyper.log }
+	</script>
+</head>
+
+<body>
+
+	<div class="my-page" id="page-default">
+		<div class="my-header">
+			<img class="my-icon-back" src="icon-back.png" ontouchend="history.back()" />
+		</div>
+		<div class="my-content">
+			<h1 style="text-align: center">ATTENTION</h1>
+			<p style="text-align: center">Please move within range of the MEDTRAQ Beacons.</p>
+		</div>
+	</div>
+
+	<div class="my-page" id="page-sink">
+		<div class="my-header">
+			<img class="my-header-image" src="photos/MEDTRAQ_SINK.png" />
+			<img id="sink" src="icon-back.png" ontouchend="history.back()" />
+		</div>
+	</div>
+
+	<div class="my-page" id="page-patient">
+		<div class="my-header">
+			<img class="my-header-image" src="photos/MEDTRAQ_PATIENT.png" />
+			<img id="patient" src="icon-back.png" ontouchend="history.back()" />
+		</div>
+	</div>
+	
+	<div class="my-page" id="page-alert">
+		<div class="my-header">
+			<img class="my-icon-back" src="icon-back.png" ontouchend="history.back()" />
+		</div>
+		<div class="my-content">
+			<h1 style="text-align: center">ALERT:</h1>
+			<p style="text-align: center">HANDS MUST BE WASHED BEFORE INTERACTING WITH PATIENT</p>
+		</div>
+	</div>
+	
+
+	<script src="lib/jquery.js"></script>
+	<script src="cordova.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>
